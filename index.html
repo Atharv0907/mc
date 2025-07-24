@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHALAXMI COLLECTION</title>
+    <link rel="shortcut icon" href="mc.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container1{
+            width:100vw;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        #navbar{
+            background-color: rgb(39, 4, 71);
+            width: 100%;
+            height:50px;
+            display:flex;
+            gap:10px;
+            
+        }
+        #logo{
+            height:50px;
+            width: 120px;
+            margin-left: 5px;
+            border:2px solid  rgb(39, 4, 71);
+            border-radius: 15px;
+        }
+        #logo:hover{
+            border:2px solid white;
+        }
+        .addicon{
+            display:flex;
+            color:rgb(213, 118, 28);
+            padding:2px;
+            gap:10px;
+        }
+        .navlocation{
+            color:rgb(213, 118, 28);
+            border:2px solid  rgb(39, 4, 71);
+            border-radius: 15px;
+            width:100px;
+            padding:5px;
+            margin-left: 20px;
+        }
+        .navlocation:hover{
+            border:2px solid white;
+        }
+        .searchbar{
+            display: flex;
+            position: relative;
+            left:80px;
+            width: 42%;
+            border:2px solid black;
+            border-radius: 50px;
+        }
+        .glass{
+            position: relative;
+            height: 49px;
+            width:70px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            
+        }
+        #glass{
+            background-color: rgb(230, 230, 44);
+            height:48px;
+            padding:10px;
+            width: 70px;
+            border:2px solid rgb(213, 118, 28);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            font-size: 25px;
+        }
+        #search{
+            height:100%;
+            width:100%;
+            border:1px solid black; 
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .language{
+            height:100%;
+            position: relative;
+            left:150px;
+            width:80px;
+            border:2px solid rgb(7, 7, 7);
+        }
+        .language:hover{
+            border:2px solid white;
+        }
+        #language{
+            height:100%;
+            width:54%;
+            color:rgb(237, 233, 241);
+            background-color:rgb(39, 4, 71);
+        }
+        #language:hover{
+            border:2px solid white;
+        }
+        #lang{
+            color:rgb(237, 233, 241);
+            background-color:rgb(39, 4, 71);
+        }
+        #flag{
+            width:45%;
+            height:100%;
+            position: absolute;
+            border:2px solid rgb(17, 16, 16); 
+        }
+        #signin{
+            position: relative;
+            left:180px;
+            height: 100%;
+            font-size: 25px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:rgb(213, 118, 28);
+            text-decoration: none;
+            border:2px solid  rgb(39, 4, 71);
+            border-radius: 15px;
+        }
+        #signin:hover{
+            border: 2px solid white;
+        }
+        .orders{
+            width:110px;
+            display:flex;
+            flex-direction: column;
+            position: relative;
+            left:200px;
+            border:2px solid  rgb(39, 4, 71);
+            border-radius: 15px;
+            padding-left: 8px;
+            padding-bottom:7px; 
+            color:rgb(213, 118, 28);
+            font-size: 20px;
+        }
+        .orders:hover{
+            border: 2px solid white;
+        }
+        .cart{
+            display: flex;
+            border:2px solid rgb(39, 4, 71); 
+            color:rgb(213, 118, 28);
+            position: relative;
+            left:220px;
+            width:80px;
+            font-size: 20px;
+            align-items: center;
+            padding-left: 5px;
+            border-radius: 15px;
+        }
+        .cart:hover{
+            border:2px solid white;
+        }
+        #navbar2{
+            background-color: #79e8e8;
+            width: 100%;
+            height:48px;
+            display:flex;
+            gap:30px;
+        }
+        #menu{
+            background-color: #79e8e8;
+            width:45px;
+            margin-left: 20px;
+            margin-top: 2px;
+            padding:2px;
+            border-radius: 10px;
+            border:2px solid rgb(10, 9, 9);
+        }
+        #menu:hover{
+            border:3px solid rgb(15, 5, 90);
+        }
+        .button{
+            display:flex;
+            gap:80px;
+            background-color: #79e8e8;
+        }
+        #b1{
+             background-color: #79e8e8;
+             border:2px solid  #79e8e8;
+        }
+        #b1:hover{
+            border:3px solid rgb(15, 5, 90);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <header>
+        <nav id="navbar">
+         <img src="mc.jpg" alt="mc_logo" id="logo">
+
+         <div class="navlocation">
+            <p>Deliver To</p>
+
+            <div class="addicon">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>INDIA</h4>
+            </div>
+         </div>
+         <div class="searchbar">
+            <input type="search" id="search" placeholder="  Search Here....">
+            <button class="glass"><i class="fa-solid fa-magnifying-glass" id="glass"></i></button>
+         </div>
+         <div class="language">
+           <select name="language" id="language">
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="HINDI">HINDI</option>
+                <option value="MARATHI">MARATHI</option>
+                <option value="TELUGU">TELUGU</option>
+                <option value="TAMIL">TAMIL</option>
+                <option value="KANNADA">KANNADA</option>
+           </select>
+           <img src="flag.png" id="flag">
+         </div>
+         <a href="" id="signin">Sign-In</a>
+         <div class="orders">
+            <p>Returns</p>
+            <h4>&  Orders</h4>
+         </div>
+
+         <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h4>Cart</h4>
+         </div>
+        </nav>
+        <nav id="navbar2">
+            <select name="menu" id="menu">
+                <option value="All">All</option>
+                <option value="Trending">Trending</option>
+                <option value="Shop By Category">Shop By Category</option>
+                <option value="Dital Contents And Devices">Dital Contents And Devices</option>
+            </select>
+            
+            <div class="button">
+            <button id="b1">Fresh</button> 
+            <button id="b1">Sale</button>
+            <button id="b1">Bestsellers</button>
+            <button id="b1">Today's Deals</button>
+            <button id="b1">Prime</button>
+            <button id="b1">New Releases</button>
+            <button id="b1">Fashion</button>
+            <button id="b1">Customer Service</button>
+            <button id="b1">Disconts And Offers</button>
+            <button id="b1">Combos</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <div class="sidebar1">
+
+        </div>
+
+         <div class="maincontent">
+                <div class="box1">
+                    <img src="img1.jpeg" id="img1">
+                    <h2>LEHENGA CHOLI</h2>
+                    <p>Women's Maroon pure cotton ethinic motif printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                
+                </div>
+
+                <div class="box2">
+                    <img src="img2.jpeg" id="img2">
+                    <h2>SILK LEHENGA</h2>
+                    <p>Women's Olive Green pure silk patola pattern printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p id="no1">1275</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">2100</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                </div>
+                <div class="box3">
+                    <img src="img3.jpeg" id="img3">
+                    <h2>SILK LEHENGA</h2>
+                    <p>Women's Olive Green pure silk patola pattern printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p id="no1">800</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1300</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                </div>
+                <div class="box4">
+                    <img src="img4.jpeg" id="img4">
+                    <h2>SILK LEHENGA</h2>
+                    <p>Women's Olive Green pure silk patola pattern printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p id="no1">873</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                </div>
+                <div class="box5">
+                    <img src="img5.jpeg" id="img5">
+                    <h2>SILK LEHENGA</h2>
+                    <p>Women's Olive Green pure silk patola pattern printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p id="no1">733</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1450</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                </div>
+                <div class="box6">
+                    <img src="img6.jpeg" id="img6">
+                    <h2>SILK LEHENGA</h2>
+                    <p>Women's Olive Green pure silk patola pattern printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                </div>
+                <div class="box7">
+                    <img src="img1.jpeg" id="img1">
+                    <h2>LEHENGA CHOLI</h2>
+                    <p>Women's Maroon pure cotton ethinic motif printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                
+                </div>
+                <div class="box8">
+                    <img src="img2.jpeg" id="img2">
+                    <h2>LEHENGA CHOLI</h2>
+                    <p>Women's Maroon pure cotton ethinic motif printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                
+                </div>
+                <div class="box9">
+                    <img src="img3.jpeg" id="img3">
+                    <h2>LEHENGA CHOLI</h2>
+                    <p>Women's Maroon pure cotton ethinic motif printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                
+                </div>
+                <div class="box10">
+                    <img src="img4.jpeg" id="img4">
+                    <h2>LEHENGA CHOLI</h2>
+                    <p>Women's Maroon pure cotton ethinic motif printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                
+                </div>
+                <div class="box11">
+                    <img src="img5.jpeg" id="img5">
+                    <h2>LEHENGA CHOLI</h2>
+                    <p>Women's Maroon pure cotton ethinic motif printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                
+                </div>
+                <div class="box12">
+                    <img src="img6.jpeg" id="img6">
+                    <h2>LEHENGA CHOLI</h2>
+                    <p>Women's Maroon pure cotton ethinic motif printed...</p>
+                    <div id="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p id="no1">273</p>
+                    </div>
+                        <i class="fa-solid fa-indian-rupee-sign" id="rupee"></i>
+                        <p id="no2">1200</p>
+
+                        <button id="b2">BUY</button>
+                        <button id="b3">ADD TO CART</button>
+                
+                </div>
+        </div>
+
+        <div class="sidebar2">
+
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
